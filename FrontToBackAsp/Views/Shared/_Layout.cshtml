@@ -1,0 +1,693 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="~//assets/plugin/flipclock.css"> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/1548466b13.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/main.css">
+</head>
+
+<body>
+    <header>
+
+        <section class="headerNavigation mega-menu text-sm">
+            <div class="headerContact">
+                <div class="headerSocial">
+                    <div class="leftSocial">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="rightSocial">
+                        <div class="number">
+                            <a href="~/#"><i class="fas fa-phone-alt text-dark" style="list-style: none;text-decoration: none;">020-800-456-747</i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="centerText d-flex text-center">
+                <p>Free in-store delivery</p>
+            </div>
+            <div class="headerRight mr-3">
+                <div class="language">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-link " data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" style="text-decoration:none; color: #343a40; outline: none;">
+                            English
+                            <i class="fas fa-angle-down"></i>
+                        </button>
+                        <ul class="dropdown-menu  dropdown-menu-lg-end dropdown-toggle" id="docsDropdown" href="~/#" data-toggle="dropdown" aria-haspopup="true" data-bs-toggle="dropdown" aria-expanded="false">
+                            <li><button class="dropdown-item" type="button">German</button></li>
+                            <li><button class="dropdown-item" type="button">French</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="exChange">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-link" data-bs-toggle="dropdown" data-bs-display="static" style="text-decoration:none; color: #343a40;">
+                            USD
+                            <i class="fas fa-angle-down"></i>
+                        </button>
+                        <ul class="dropdown-menu drop-menu-lg-end dropdown-toggle">
+                            <li><button class="dropdown-item" type="button">EUR</button></li>
+                            <li><button class="dropdown-item" type="button">GBP</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <nav class="navbar navbar-expand-lg bg-transparent border-0 shadow-0 navbar-light px-lg-5 ">
+            <a class="navbar-brand" href="~/index.html">Varkala</a>
+            <ul class="list-inline mb-0 d-block d-lg-none">
+                <li class="list-inline-item mr-3">
+                    <a class="text-dark text-hover-primary" href="~/#" data-toggle="modal" data-target="#loginModal">
+                        <svg class="svg-icon navbar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="avatar-1">
+                            <title>Avatar</title>
+                            <desc>A line styled icon from Orion Icon Library.</desc>
+                            <path data-name="layer2" d="M24 40.8V44c0 2-1 5.2-11 7A13.4 13.4 0 0 0 2 62h60a15.5 15.5 0 0 0-12-11c-10-1.9-10-5-10-7v-3.2" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                            <path data-name="layer1" d="M46 25.6c0 10-6.3 18.4-14 18.4s-14-8-14-18v-9.6C18 6 25.4 2 32 2s14 3.6 14 14z" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="list-inline-item mr-3 cart">
+                    <a class="text-dark text-hover-primary relative cart" href="~/wishlist.html">
+                        <svg class="svg-icon navbar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="heart-1">
+                            <title>Heart</title>
+                            <desc>A line styled icon from Orion Icon Library.</desc>
+                            <path data-name="layer1" d="M47 5c-6.5 0-12.9 4.2-15 10-2.1-5.8-8.5-10-15-10A15 15 0 0 0 2 20c0 13 11 26 30 39 19-13 30-26 30-39A15 15 0 0 0 47 5z" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                        </svg>
+                        <div class="navbar-icon-badge"><span>0</span></div>
+                    </a>
+                </li>
+                <li class="list-inline-item relative mr-3 cart">
+                    <a class="text-dark text-hover-primary" href="~/#" data-toggle="modal" data-target="#sidebarCart">
+                        <svg class="svg-icon navbar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="retail-bag-1">
+                            <title>Retail Bag</title>
+                            <desc>A line styled icon from Orion Icon Library.</desc>
+                            <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M4 14h56v48H4zm2 0V2h52v12" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                            <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M6.2 2.1L16 8 6 14M57.8 2.1L48 8l10 6" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                            <path data-name="layer1" d="M42 24a10 10 0 0 1-20 0" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                        </svg>
+                        <div class="navbar-icon-badge cart"><span>5</span></div>
+                    </a>
+                </li>
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg class="svg-icon navbar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="menu-hamburger-1">
+                    <title>Menu Hamburger</title>
+                    <desc>A line styled icon from Orion Icon Library.</desc>
+                    <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M2 14h60M2 32h36" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                    <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M2 50h60" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                </svg>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mt-3 mt-lg-0 drop-menu">
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" id="homeDropdown" href="~/#" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+                        <div class="dropdown-menu" aria-labelledby="homeDropdown">
+                            <a class="dropdown-item" href="~/index.html">Home 1 - Fashion </a><a class="dropdown-item" href="~/index-2.html">Home 2 - Fashion </a><a class="dropdown-item" href="~/index-3.html">Home 3 - Design <span class="badge badge-primary-light ml-1">New</span> </a>
+                            <a class="dropdown-item" href="~/index-4.html">Home 4 - Design <span class="badge badge-primary-light ml-1">New</span> </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="shopDropdown" href="~/#" data-toggle="dropdown" aria-haspopup="true" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                        <div class="dropdown-menu py-0" aria-labelledby="shopDropdown" data-min-width="750px" data-translate-x="-50px">
+                            <div class="row" style="width: 670px; min-width: 100%;">
+                                <div class="col-lg-4 col-sm-6 p-lg-5">
+                                    <h6 class="dropdown-header h6 pl-lg-0">Shop pages</h6><a class="dropdown-item pl-lg-0" href="~/category-full.html">Full width </a><a class="dropdown-item pl-lg-0" href="~/category-full-sidebar.html">Full width with category menu </a><a class="dropdown-item pl-lg-0"
+                                                                                                                                                                                                                                                                            href="~/category-big-products.html">Full width with big products </a><a class="dropdown-item pl-lg-0" href="~/category-boxed.html">Fixed width </a><a class="dropdown-item pl-lg-0" href="~/category-sidebar.html">Fixed width & sidebar </a>
+                                    <a class="dropdown-item pl-lg-0" href="~/category-masonry.html">Fixed width & masonry layout<span class="badge badge-primary-light ml-1">New</span> </a><a class="dropdown-item pl-lg-0" href="~/category-categories.html">Subcategories </a>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 p-lg-5">
+                                    <h6 class="dropdown-header h6 pl-lg-0">Product pages</h6><a class="dropdown-item pl-lg-0" href="~/detail-1.html">Product with sticky info </a><a class="dropdown-item pl-lg-0" href="~/detail-2.html">Product with background </a><a class="dropdown-item pl-lg-0"
+                                                                                                                                                                                                                                                                     href="~/detail-3.html">Product standard  </a>
+                                </div>
+                                <div class="col-lg-4 d-none d-lg-block"><img class="bg-image" src="/assets/img/kyle-loftus-596319-unsplash-cropped.jpg" alt=""></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="iconsDropdown" href="~/#" data-toggle="dropdown" aria-haspopup="true" data-bs-toggle="dropdown" aria-expanded="false">Icons</a>
+                        <div class="dropdown-menu py-lg-0" aria-labelledby="iconsDropdown" data-min-width="750px">
+                            <div class="row py-lg-5 px-4 " style="width: 650px; margin-left: -15px; margin-right: -15px;">
+                                <div class="col-6 col-sm-3 col-md-2 text-center mb-2 mb-lg-5">
+                                    <a class="text-reset" href="~/category-categories.html">
+                                        <img src="https://img.icons8.com/ios/50/000000/trousers.png" />
+                                        <h6>Trousers</h6>
+                                    </a>
+                                </div>
+                                <div class="col-6 col-sm-3 col-md-2 text-center mb-2 mb-lg-5">
+                                    <a class="text-reset" href="~/category-categories.html">
+                                        <img src="~/assets/img/001-suit.png" alt="">
+                                        <h6>Jackets</h6>
+                                    </a>
+                                </div>
+                                <div class="col-6 col-sm-3 col-md-2 text-center mb-2 mb-lg-5">
+                                    <a class="text-reset" href="~/category-categories.html">
+                                        <img src="https://img.icons8.com/pastel-glyph/64/000000/t-shirt--v3.png" />
+                                        <h6>T-Shirts</h6>
+                                    </a>
+                                </div>
+                                <div class="col-6 col-sm-3 col-md-2 text-center mb-2 mb-lg-5">
+                                    <a class="text-reset" href="~/category-categories.html">
+                                        <img src="/assets/img/shirt.png" alt="">
+                                        <h6>Shirts</h6>
+                                    </a>
+                                </div>
+                                <div class="col-6 col-sm-3 col-md-2 text-center mb-2 mb-lg-5">
+                                    <a class="text-reset" href="~/category-categories.html">
+                                        <img src="~/assets/img/pullover.png" alt="">
+                                        <h6>Pullovers</h6>
+                                    </a>
+                                </div>
+                                <div class="col-6 col-sm-3 col-md-2 text-center mb-2 mb-lg-5">
+                                    <a class="text-reset" href="~/category-categories.html">
+                                        <img src="https://img.icons8.com/wired/64/000000/scarf.png" />
+                                        <h6>Scarfs</h6>
+                                    </a>
+                                </div>
+                                <div class="col-6 col-sm-3 col-md-2 text-center mb-2 mb-lg-0">
+                                    <a class="text-reset" href="~/category-categories.html">
+                                        <img src="~/assets/img/shorts.png" alt="">
+                                        <h6>Shorts</h6>
+                                    </a>
+                                </div>
+                                <div class="col-6 col-sm-3 col-md-2 text-center mb-2 mb-lg-0">
+                                    <a class="text-reset" href="~/category-categories.html">
+                                        <img src="~/assets/img/shorts (1).png" alt="">
+                                        <h6>Underwear</h6>
+                                    </a>
+                                </div>
+                                <div class="col-6 col-sm-3 col-md-2 text-center mb-2 mb-lg-0">
+                                    <a class="text-reset" href="~/category-categories.html">
+                                        <img src="~/assets/img/watch.png" alt="">
+                                        <h6>Watches</h6>
+                                    </a>
+                                </div>
+                                <div class="col-6 col-sm-3 col-md-2 text-center mb-2 mb-lg-0">
+                                    <a class="text-reset" href="~/category-categories.html">
+                                        <img src="~/assets/img/briefcase.png" alt="">
+                                        <h6>Bags</h6>
+                                    </a>
+                                </div>
+                                <div class="col-6 col-sm-3 col-md-2 text-center mb-2 mb-lg-0">
+                                    <a class="text-reset" href="~/category-categories.html">
+                                        <img src="~/assets/img/cap.png" alt="">
+                                        <h6>Caps</h6>
+                                    </a>
+                                </div>
+                                <div class="col-6 col-sm-3 col-md-2 text-center mb-2 mb-lg-0">
+                                    <a class="text-reset" href="~/category-categories.html">
+                                        <img src="https://img.icons8.com/ios/50/000000/bow-tie.png" />
+                                        <h6>Accessories</h6>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-primary text-center text-sm d-none d-lg-block">
+                                <p class="mb-0">Don't miss our biggest sales this year. Use the code "SUMMER35" at checkout until Jun. 15! </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle" href="~/#" data-toggle="dropdown" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu megamenu px-4 px-lg-5 py-lg-5" data-translate-x="-50%">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-6">
+                                    <img class="img-fluid mb-3 d-none d-lg-block" src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/blog/christopher-campbell-28571-unsplash.jpg" alt="" />
+
+                                    <h6>Homepage</h6>
+                                    <ul class="megamenu-list list-unstyled">
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/index.html">Home 1 - Fashion   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/index-2.html">Home 2 - Fashion   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/index-3.html">Home 3 - Design <span class="badge badge-primary-light ml-1">New</span>   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/index-4.html">Home 4 - Design <span class="badge badge-primary-light ml-1">New</span>   </a></li>
+                                    </ul>
+
+                                    <h6>Category</h6>
+                                    <ul class="megamenu-list list-unstyled mb-lg-0">
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/category-full.html">Full width   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/category-full-sidebar.html">Full width with category menu   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/category-big-products.html">Full width with big products   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/category-boxed.html">Fixed width   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/category-sidebar.html">Fixed width & sidebar   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/category-masonry.html">Fixed width & masonry layout<span class="badge badge-primary-light ml-1">New</span>   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/category-categories.html">Subcategories   </a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <img class="img-fluid mb-3 d-none d-lg-block" src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/blog/ian-dooley-347962-unsplash.jpg" alt="" />
+                                    <!-- Megamenu list-->
+                                    <h6>Order process</h6>
+                                    <ul class="megamenu-list list-unstyled">
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/cart.html">Shopping cart   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/checkout1.html">Checkout - Five steps <span class="badge badge-primary-light ml-1">New</span>   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/checkout.html">Checkout - Single-page   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/checkout-confirmed.html">Checkout - confirmed   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/wishlist.html">Wishlist   </a></li>
+                                    </ul>
+                                    <!-- Megamenu list-->
+                                    <h6>Product</h6>
+                                    <ul class="megamenu-list list-unstyled mb-lg-0">
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/detail-1.html">Product with sticky info   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/detail-2.html">Product with background   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/detail-3.html">Product standard    </a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <img class="img-fluid mb-3 d-none d-lg-block" src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/blog/ian-dooley-347942-unsplash.jpg" alt="" />
+                                    <!-- Megamenu list-->
+                                    <h6>Blog</h6>
+                                    <ul class="megamenu-list list-unstyled">
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/blog.html">Blog   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/blog-masonry.html">Blog - Masonry   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/post.html">Post   </a></li>
+                                    </ul>
+                                    <!-- Megamenu list-->
+                                    <h6>Pages</h6>
+                                    <ul class="megamenu-list list-unstyled">
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/about.html">About - Company <span class="badge badge-primary-light ml-1">New</span>   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/about-2.html">About v.2 - Person <span class="badge badge-primary-light ml-1">New</span>   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/faq.html">F.A.Q. <span class="badge badge-primary-light ml-1">New</span>   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/contact.html">Contact   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/privacy.html">Privacy policy <span class="badge badge-primary-light ml-1">New</span>   </a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <img class="img-fluid mb-3 d-none d-lg-block" src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/blog/photo-1534126511673-b6899657816a.jpg" alt="" />
+                                    <!-- Megamenu list-->
+                                    <h6>Customer</h6>
+                                    <ul class="megamenu-list list-unstyled mb-lg-0">
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/customer-login.html">Login/sign up<span class="badge badge-primary-light ml-1">New</span>   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/customer-orders.html">Orders <span class="badge badge-primary-light ml-1">New</span>   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/customer-order.html">Order detail <span class="badge badge-primary-light ml-1">New</span>   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/customer-order-tracking.html">Order tracking <span class="badge badge-primary-light ml-1">New</span>   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/customer-addresses.html">Addresses <span class="badge badge-primary-light ml-1">New</span>   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/customer-account.html">Profile <span class="badge badge-primary-light ml-1">New</span>   </a></li>
+                                        <li class="megamenu-list-item"><a class="megamenu-list-link" href="~/customer-wishlist.html">Wishlist <span class="badge badge-primary-light ml-1">New</span>   </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /Megamenu end-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="docsDropdown" href="~/#" data-toggle="dropdown" aria-haspopup="true" data-bs-toggle="dropdown" aria-expanded="false">Docs</a>
+                        <div class="dropdown-menu" aria-labelledby="homeDropdown">
+                            <a class="dropdown-item" href="~/docs/index.html">Introduction </a><a class="dropdown-item" href="~/docs/directory-structure.html">Directory structure </a><a class="dropdown-item" href="~/docs/gulp.html">Gulp </a><a class="dropdown-item"
+                                                                                                                                                                                                                                              href="~/docs/customizing-css.html">Customizing CSS </a><a class="dropdown-item" href="~/docs/credits.html">Credits </a><a class="dropdown-item" href="~/docs/changelog.html">Changelog </a>
+                            <div class="dropdown-divider"></div><a class="dropdown-item" href="~/docs/components-bootstrap.html">Bootstrap </a><a class="dropdown-item" href="~/docs/components-theme.html">Theme </a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="d-lg-flex ml-auto mr-lg-5 mr-xl-6 my-4 my-lg-0" action="#">
+                    <div class="input-group input-group-underlined">
+                        <input class="form-control form-control-underlined pl-3" type="text" placeholder="Search" aria-label="Search" aria-describedby="button-search">
+                        <div class="input-group-append ml-0">
+                            <button class="btn btn-underlined py-0" id="button-search" type="button">
+                                <i class="fas fa-search navbar-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <ul class="list-inline mb-0 d-none d-lg-block">
+                    <li class="list-inline-item mr-3">
+                        <a class="text-dark text-hover-primary" href="~/#" data-toggle="modal" data-target="#loginModal">
+                            <svg class="svg-icon navbar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="avatar-1">
+                                <title>Avatar</title>
+                                <desc>A line styled icon from Orion Icon Library.</desc>
+                                <path data-name="layer2" d="M24 40.8V44c0 2-1 5.2-11 7A13.4 13.4 0 0 0 2 62h60a15.5 15.5 0 0 0-12-11c-10-1.9-10-5-10-7v-3.2" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                <path data-name="layer1" d="M46 25.6c0 10-6.3 18.4-14 18.4s-14-8-14-18v-9.6C18 6 25.4 2 32 2s14 3.6 14 14z" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="list-inline-item mr-3 ">
+                        <a class="text-dark text-hover-primary relative cart" href="~/#wishlist.html">
+                            <svg class="svg-icon navbar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="heart-1">
+                                <title>Heart</title>
+                                <desc>A line styled icon from Orion Icon Library.</desc>
+                                <path data-name="layer1" d="M47 5c-6.5 0-12.9 4.2-15 10-2.1-5.8-8.5-10-15-10A15 15 0 0 0 2 20c0 13 11 26 30 39 19-13 30-26 30-39A15 15 0 0 0 47 5z" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                            </svg>
+                            <div class="navbar-icon-badge "><span>0</span></div>
+                        </a>
+                    </li>
+                    <li class="list-inline-item relative mr-3">
+                        <a class="text-dark text-hover-primary" href="~/#" data-toggle="modal" data-target="#sidebarCart">
+                            <img src="https://img.icons8.com/wired/24/000000/shopping-bag-full.png" />
+                            <div class="navbar-icon-badge">5</div>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="text-dark text-hover-primary" href="~/#" data-toggle="modal">
+                            <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#sidebarRight">
+                                <svg class="svg-icon navbar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="menu-hamburger-1">
+                                    <title>Menu Hamburger</title>
+                                    <desc>A line styled icon from Orion Icon Library.</desc>
+                                    <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M2 14h60M2 32h36" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M2 50h60" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                </svg>
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- ----------------Sidebar Menu---------------------- -->
+    <div class="modal fade modal-right" id="sidebarRight" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button class="close close-rotate" type="button" data-dismiss="modal" aria-label="Close">
+                        <svg class="svg-icon navbar-icon" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle!important; width: 3rem; height: 3rem; stroke-width: 2; " viewBox="0 0 64 64" id="close-1">
+                            <title>Close</title>
+                            <desc>A line styled icon from Orion Icon Library.</desc>
+                            <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M41.999 20.002l-22 22m22 0L20 20" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-body px-5 pb-5">
+                    <div>
+                        <h5 class="mb-5" data-aos="zoom-in" data-aos-delay="50">Varkala</h5>
+                        <ul class="nav flex-column mb-5">
+                            <li class="nav-item"><a class="nav-link pl-0 text-muted" href="~/#">Home </a></li>
+                            <li class="nav-item"><a class="nav-link pl-0 text-muted" href="~/#">Link</a></li>
+                            <li class="nav-item"><a class="nav-link pl-0 disabled" href="~/#">Disabled</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link pl-0 dropdown-toggle text-muted" id="navbarDropdownMenuLink" href="~/#" data-target="#sidebarSubmenu" data-toggle="collapse" aria-haspopup="true" aria-expanded="false">Dropdown link</a>
+                                <div class="collapse" id="sidebarSubmenu">
+                                    <ul class="nav flex-column ml-3">
+                                        <li class="nav-item"><a class="nav-link pl-0 text-muted" href="~/#">Action</a></li>
+                                        <li class="nav-item"><a class="nav-link pl-0 text-muted" href="~/#">Another action</a></li>
+                                        <li class="nav-item"><a class="nav-link pl-0 text-muted" href="~/#">Something else here                </a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="list-inline mb-4">
+                            <li class="list-inline-item mr-2"><i class="fab fa-facebook-f"> </i></li>
+                            <li class="list-inline-item mr-2"><i class="fab fa-twitter"> </i></li>
+                            <li class="list-inline-item mr-2">
+                                <svg class="svg-icon navbar-icon mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="calls-1">
+                                    <title>Calls</title>
+                                    <desc>A line styled icon from Orion Icon Library.</desc>
+                                    <path data-name="layer1" d="M58.9 47l-10.4-6.8a4.8 4.8 0 0 0-6.5 1.3c-2.4 2.9-5.3 7.7-16.2-3.2S19.6 24.4 22.5 22a4.8 4.8 0 0 0 1.3-6.5L17 5.1c-.9-1.3-2.1-3.4-4.9-3S2 6.6 2 15.6s7.1 20 16.8 29.7S39.5 62 48.4 62s13.2-8 13.5-10-1.7-4.1-3-5z" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                </svg> 020-800-456-747
+                            </li>
+                        </ul>
+                        <p class="text-sm text-muted mb-0">Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------------------------------------------- -->
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style=" width: 598px;">
+                <button class="close close-absolute close-rotate" type="button" data-dismiss="modal" aria-label="Close">
+                    <svg class="svg-icon navbar-icon" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle!important; width: 3rem; height: 3rem; stroke-width: 2; top:1rem; right: 1rem; " viewBox="0 0 64 64" id="close-1">
+                        <title>Close</title>
+                        <desc>A line styled icon from Orion Icon Library.</desc>
+                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M41.999 20.002l-22 22m22 0L20 20" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                    </svg>
+                </button>
+                <div class="modal-body p-5">
+                    <ul class="nav list-inline" role="tablist">
+                        <li class="list-inline-item"><a class="nav-link nav-link-lg active" data-toggle="tab" href="~/#loginModalTabLogin" role="tab" id="loginModalLinkLogin" aria-controls="loginModalTabLogin" aria-selected="true" style="display: block; color:#bcac76; padding: 8px 16px; font-size: 1.5rem; font-weight: bold;">Login</a></li>
+                        <li class="list-inline-item"><a class="nav-link nav-link-lg text-muted" data-toggle="tab" href="~/#loginModalTabRegister" role="tab" id="loginModalLinkRegister" aria-controls="loginModalTabRegister" aria-selected="false" style=" font-size: 1.5rem; font-weight: bold;">Register</a></li>
+                    </ul>
+                    <hr class="mb-3">
+                    <div class="tab-content">
+                        <div class="tab-pane active fade show px-3" id="loginModalTabLogin" role="tabpanel" aria-labelledby="loginModalLinkLogin">
+                            <form action="customer-orders.html" method="get">
+                                <div class="form-group">
+                                    <label class="form-label" for="email" style="font-weight: bold;">Email</label>
+                                    <input class="form-control" id="email" type="text" style="border-radius: 0; margin-top: 6px; margin-bottom: 11px;">
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="loginPassword" style="font-weight:bold;"> Password</label>
+                                        </div>
+                                        <div class="col-auto"><a class="form-text small" href="~/#" style="color: #bcac76;">Forgot password?</a></div>
+                                    </div>
+                                    <input class="form-control" name="loginPassword" id="loginPassword" placeholder="Password" type="password" required data-msg="Please enter your password" style="border-radius:0!important; padding:6px 12px; margin-top: 6px; margin-bottom: 11px;">
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox" style="margin:15px 0;">
+                                        <input class="custom-control-input" id="loginRemember" type="checkbox" style="color: #202020!important;">
+                                        <label class="custom-control-label text-muted" for="loginRemember"> <span class="text-sm" style="font-weight:bold;margin:15px 0;">Remember me for 30 days</span></label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-block btn-outline-dark" type="submit" style="height: 38.78px; width: 470px; margin-top: 6px; margin-bottom: 11px;"><i class="fa fa-sign-in-alt mr-2"></i> Log in</button>
+                                </div>
+                            </form>
+                            <hr class="my-3 hr-text letter-spacing-2" data-content="OR">
+                            <div class="text-center">
+                                <button class="btn btn btn-outline-primary letter-spacing-0" data-toggle="tooltip" title="Connect with Facebook"><i class="fa-fw fa-facebook-f fab"></i><span class="sr-only">Connect with Facebook</span></button>
+                                <button class="btn btn btn-outline-muted letter-spacing-0" data-toggle="tooltip" title="Connect with Google" style="color: #868e96;
+                                border-color: #868e96;">
+                                    <i class="fa-fw fa-google fab"></i><span class="sr-only">Connect with Google</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade px-3" id="loginModalTabRegister" role="tabpanel" aria-labelledby="loginModalLinkRegister">
+                            <p class="text-muted text-sm">The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pit. </p>
+                            <form action="customer-orders.html" method="get">
+                                <div class="form-group">
+                                    <label class="form-label" for="registerName" style="font-weight: bold;">Name</label>
+                                    <input class="form-control" id="registerName" type="text" style="border-radius: 0; margin-top: 6px; margin-bottom: 11px;">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="registerEmail" style="font-weight: bold;">Email</label>
+                                    <input class="form-control" id="registerEmail" type="text" style="border-radius: 0; margin-top: 6px; margin-bottom: 11px;">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="registerPassword" style="font-weight:bold;">Password</label>
+                                    <input class="form-control" id="registerPassword" type="password" style="border-radius:0!important; padding:6px 12px; margin-top: 6px; margin-bottom: 11px;">
+                                </div>
+                                <div class="form-group text-center">
+                                    <button class="btn btn-block btn-outline-dark" type="submit" type="submit" style="height: 38.78px; width: 470px; margin-top: 6px; margin-bottom: 11px;"><i class="far fa-user mr-2"></i>Register</button>
+                                </div>
+                            </form>
+                            <hr class="my-3 hr-text letter-spacing-2" data-content="OR CONNECT WITH">
+                            <div class="text-center">
+                                <button class="btn btn btn-outline-primary letter-spacing-0" data-toggle="tooltip" title="Connect with Facebook"><i class="fa-fw fa-facebook-f fab"></i><span class="sr-only">Connect with Facebook</span></button>
+                                <button class="btn btn btn-outline-muted letter-spacing-0" data-toggle="tooltip" title="Connect with Google" style="color: #868e96;
+                                border-color: #868e96;">
+                                    <i class="fa-fw fa-google fab"></i><span class="sr-only">Connect with Google</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+   
+    @RenderBody()
+    <footer>
+        <!-- Services block-->
+        <div class="py-5 py-lg-6 service">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 py-4 service-column">
+                        <svg class="svg-icon service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="delivery-time-1">
+                            <title>Delivery Time</title>
+                            <desc>A line styled icon from Orion Icon Library.</desc>
+                            <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M62 46v-5l-8-7h-8" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                            <circle data-name="layer2" cx="24" cy="54" r="4" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></circle>
+                            <circle data-name="layer2" cx="54" cy="54" r="4" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></circle>
+                            <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M50 54H28m-8 0h-4v-8h46v8h-4M24.5 24H46v22m-30 0V29.8M2 38h6m-2 8h2" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                            <circle data-name="layer1" cx="14" cy="18" r="12" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></circle>
+                            <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M14 12v8h6" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                        </svg>
+                        <div class="service-text">
+                            <h6 class="text-sm mb-1">Free shipping &amp; return</h6>
+                            <p class="text-muted font-weight-light text-sm mb-0">Free Shipping over $300</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 py-4 service-column">
+                        <svg class="svg-icon service-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" id="money-1">
+                            <title>Money</title>
+                            <desc>A line styled icon from Orion Icon Library.</desc>
+                            <path stroke-miterlimit="10" stroke="#202020" fill="none" d="M42 22a20 20 0 1 1-20 20" data-name="layer1" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                            <circle stroke-miterlimit="10" stroke="#202020" fill="none" r="20" cy="22.001" cx="22" data-name="layer2" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></circle>
+                            <path stroke-miterlimit="10" stroke="#202020" fill="none" d="M26.949 17a5.006 5.006 0 0 0-4.932-4.167c-2.762 0-5 1.822-5 4.583s2.5 4.012 5 4.584 5 1.822 5 4.584-2.238 4.584-5 4.584a5 5 0 0 1-5-5" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                            <path d="M22.018 12.832v-2.831m0 23.998v-2.832" stroke-miterlimit="10" stroke="#202020" fill="none" data-name="layer2" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                            <path d="M42 53.999v-2.834" stroke-miterlimit="10" stroke="#202020" fill="none" data-name="layer1" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                            <path stroke-miterlimit="10" stroke="#202020" fill="none" d="M37 46.165a5 5 0 0 0 5 5c2.762 0 5-1.822 5-4.582S44.5 42.562 42 42a9.814 9.814 0 0 1-2.887-1.1" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                            <path stroke-miterlimit="10" stroke="#202020" fill="none" d="M46.93 37a4.993 4.993 0 0 0-1.535-2.835" data-name="layer1" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                        </svg>
+                        <div class="service-text">
+                            <h6 class="text-sm mb-1">Money back guarantee</h6>
+                            <p class="text-muted font-weight-light text-sm mb-0">30 Days Money Back Guarantee</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 py-4 service-column">
+                        <svg class="svg-icon service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="special-price-1">
+                            <title>Special Price</title>
+                            <desc>A line styled icon from Orion Icon Library.</desc>
+                            <circle data-name="layer2" cx="21" cy="23" r="5" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></circle>
+                            <circle data-name="layer2" cx="43" cy="41" r="5" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></circle>
+                            <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M46 18L18 46" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                            <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M32 4.5L38 2l4.5 4.6H49l2.5 5.9 5.9 2.5v6.5L62 26l-2.5 6 2.5 6-4.6 4.5V49l-5.9 2.5-2.5 5.9h-6.5L38 62l-6-2.5-6 2.5-4.5-4.6H15l-2.5-5.9L6.6 49v-6.5L2 38l2.5-6L2 26l4.6-4.5V15l5.9-2.5L15 6.6h6.5L26 2l6 2.5z" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                        </svg>
+                        <div class="service-text">
+                            <h6 class="text-sm mb-1">Best prices</h6>
+                            <p class="text-muted font-weight-light text-sm mb-0">Always the best prices</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 py-4 service-column">
+                        <svg class="svg-icon service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="customer-support-1">
+                            <title>Customer Support</title>
+                            <desc>A line styled icon from Orion Icon Library.</desc>
+                            <path data-name="layer2" d="M24 40.5V44c0 2 .6 5-10.4 7A14.6 14.6 0 0 0 2 62h59a14.3 14.3 0 0 0-11.4-11C39 49 40 46 40 44v-5" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                            <path data-name="layer1" d="M46.4 33H51a3.3 3.3 0 0 0 3-3v-7a3.3 3.3 0 0 0-3-3h-5m-28 0h-6a3.3 3.3 0 0 0-3 3v7a3.3 3.3 0 0 0 3 3h5.2" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                            <path data-name="layer2" d="M46 18C26 18 26 4 26 4s1 12-8 15m18 43l9.6-12m-27.7 0L28 62M17.9 50a10.8 10.8 0 0 1-4.9-4c4-4 5-20 5-20m28 0s0 16 4 20a10.7 10.7 0 0 1-4.7 4" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                            <path data-name="layer2" d="M26 42c-4.7-2.9-8-8.8-8-16V16C18 5.6 25.4 2 32 2s14 3.6 14 14v16c0 4-4 7-6 7" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                            <path data-name="layer1" d="M40 38.9a2.9 2.9 0 0 0-2.9-2.9h-2.2a2.9 2.9 0 0 0-2.9 2.9 3 3 0 0 0 2.9 3.1H37a3 3 0 0 0 3-3.1z" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                        </svg>
+                        <div class="service-text">
+                            <h6 class="text-sm mb-1">020-800-456-747</h6>
+                            <p class="text-muted font-weight-light text-sm mb-0">24/7 Available Support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main block - menus, subscribe form-->
+        <div class="main-block text-muted">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 pr-lg-5 pr-xl-6 mb-5 mb-lg-0 footer-header" style="padding-right: 3rem;">
+                        <h6 class=" letter-spacing-1 mb-4">Be in touch</h6>
+                        <p class="text-sm mb-3"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.</p>
+                        <form action="#" id="newsletter-form">
+                            <div class="input-group input-group-underlined mb-3">
+                                <input class="form-control form-control-underlined" type="email" placeholder="Your Email Address" aria-label="Your Email Address">
+                                <div class="input-group-append ml-0">
+                                    <button class="btn btn-underline text-gray-700 py-0" type="button">
+                                        <svg class="svg-icon navbar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="envelope-1">
+                                            <title>Envelope</title>
+                                            <desc>A line styled icon from Orion Icon Library.</desc>
+                                            <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M2 12l30 27.4L62 12" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                            <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M2 12h60v40H2z" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <a class="d-lg-none footer-toggler my-3" data-toggle="collapse" href="~/#footerMenu0" aria-expanded="false" aria-controls="footerMenu0">
+                                    Shop
+                                    <span class="footer-toggler-icon"></span>
+                                </a>
+
+                                <div class="expand-lg footer-menu" id="footerMenu0">
+                                    <h6 class="text-dark letter-spacing-1 mb-4 d-none  d-lg-block">Shop</h6>
+                                    <ul class="list-unstyled text-sm pt-2 pt-lg-0">
+                                        <li class="list"> <a class="text-muted text-hover-dark animate" href="~/#">For Women</a></li>
+                                        <li class="list"> <a class="text-muted text-hover-dark animate" href="~/#">For Men</a></li>
+                                        <li class="list"> <a class="text-muted text-hover-dark animate" href="~/#">Stores</a></li>
+                                        <li class="list"> <a class="text-muted text-hover-dark animate" href="~/#">Our Blog</a></li>
+                                        <li class="list"> <a class="text-muted text-hover-dark animate" href="~/#">Shop</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <a class="d-lg-none footer-toggler my-3" data-toggle="collapse" href="~/#footerMenu1" aria-expanded="false" aria-controls="footerMenu1">
+                                    Company
+                                    <span class="footer-toggler-icon"></span>
+                                </a>
+                                <!-- Footer collapsible menu-->
+                                <div class="expand-lg footer-menu" id="footerMenu1">
+                                    <h6 class="text-dark letter-spacing-1 mb-4 d-none d-lg-block">Company</h6>
+                                    <ul class="list-unstyled text-sm pt-2 pt-lg-0">
+                                        <li class="list"> <a class="text-muted text-hover-dark animate" href="~/#">Login</a></li>
+                                        <li class="list"> <a class="text-muted text-hover-dark animate" href="~/#">Register</a></li>
+                                        <li class="list"> <a class="text-muted text-hover-dark animate" href="~/#">Wishlist</a></li>
+                                        <li class="list"> <a class="text-muted text-hover-dark animate" href="~/#">Our Products</a></li>
+                                        <li class="list"> <a class="text-muted text-hover-dark animate" href="~/#">Checkouts</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <a class="d-lg-none footer-toggler my-3" data-toggle="collapse" href="~/#footerMenu2" aria-expanded="false" aria-controls="footerMenu2">
+                                    Your account
+                                    <span class="footer-toggler-icon">
+                                    </span>
+                                </a>
+                                <!-- Footer collapsible menu-->
+                                <div class="expand-lg footer-menu" id="footerMenu2">
+                                    <h6 class="text-dark letter-spacing-1 mb-4 d-none d-lg-block">Your account</h6>
+                                    <ul class="list-unstyled text-sm pt-2 pt-lg-0">
+                                        <li class="list"> <a class="text-muted text-hover-dark animate" href="~/#">Login</a></li>
+                                        <li class="list"> <a class="text-muted text-hover-dark animate" href="~/#">Register</a></li>
+                                        <li class="list"> <a class="text-muted text-hover-dark animate" href="~/#">Wishlist</a></li>
+                                        <li class="list"> <a class="text-muted text-hover-dark animate" href="~/#">Our Products</a></li>
+                                        <li class="list"> <a class="text-muted text-hover-dark animate" href="~/#">Checkouts</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright section of the footer-->
+        <div class="py-4 font-weight-light text-muted">
+            <div class="container">
+                <div class="row align-items-center text-sm text-gray-500">
+                    <div class="col-lg-4 text-center text-lg-left">
+                        <p class="mb-lg-0">&copy; 2020 Your company. All rights reserved.</p>
+                    </div>
+                    <div class="col-lg-8">
+                        <ul class="list-inline mb-0 mt-2 mt-md-0 text-center text-lg-right">
+                            <li class="list-inline-item"> <a class="text-reset" href="~/#">Terms &amp; Conditions </a></li>
+                            <li class="list-inline-item"> <a class="text-reset" href="~/#">Privacy &amp; cookies </a></li>
+                            <li class="list-inline-item"> <a class="text-reset" href="~/#">Accessibility </a></li>
+                            <li class="list-inline-item"> <a class="text-reset" href="~/#">Customer Data Promise </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/cart-localstorage@1.1.4/dist/cart-localstorage.min.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/cart-localstorage@1.1.4/dist/cart-localstorage.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="~/js/script.js"></script>
+</body>
+
+</html>

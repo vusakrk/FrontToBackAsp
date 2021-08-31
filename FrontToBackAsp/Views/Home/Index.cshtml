@@ -1,0 +1,783 @@
+﻿@model HomeViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg" style="width: 800px;height: 800px;max-width: 100%;left: -200px;top: -200px;position: absolute;z-index: -1;">
+    <path id="blob" d="M 419.4 180.5 c 43 43.1 90.8 81.3 90.2 118.9 C 509 337 460 374 417 416 c -43 42 -80 89 -124.9 96.9 c -44.9 7.9 -97.7 -23.3 -141.2 -65.3 c -43.5 -42 -77.7 -94.8 -83.8 -153.7 c -6.2 -59 15.8 -124 59.3 -167.2 c 43.5 -43.1 108.5 -64.4 160.2 -51 c 51.6 13.4 89.8 61.6 132.8 104.8 Z" fill="#e0d4ab"></path>
+</svg>
+
+<div class="swiper-container glide home-slider-design" style="height: 50vh; min-height: 500px;">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-sm-6 pt-5 pt-md-0" data-swiper-parallax="-500">
+                        <p class="subtitle letter-spacing-3 mb-3 text-dark font-weight-light">Time is almost up</p>
+                        <h2 class="display-3 mb-5" style="line-height: 1">Design clocks on sale</h2><a class="btn btn-outline-primary" href="~/#">Start shopping</a>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        @foreach (Slide item in Model.Slides)
+                        {
+                            <img class="img-fluid home-slider-image" src="~/img/@item.Image" alt="" style="max-height: 500px" data-swiper-parallax="-200">
+                        }
+                        
+                        <svg class="blobb watch" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="color: #e7eaf9" width="100%" id="blobSvg" style="color: rgb(231,234,249);
+                            position: absolute;
+                            left: 152px;
+                            top: 17px;
+                            z-index: -1;
+                            width: 500px;
+                            height: 500px;">
+                            <path id="blob" d="M 456.5 103.8 c 39.6 42.8 60.2 98.6 63.7 152.4 c 3.6 53.7 -10 105.5 -39.1 141.3 c -29.1 35.8 -73.6 55.6 -117.4 67.1 c -43.9 11.4 -87 14.6 -120.7 -0.8 s -58.1 -49.4 -87.1 -86.8 c -29 -37.5 -62.6 -78.4 -57.4 -113.4 c 5.1 -35 49 -64 89 -106.8 c 40.1 -42.8 76.3 -99.3 123.6 -112.6 C 358.5 31 417 60.9 456.5 103.8 Z" fill="#e0d4ab"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide bg-cover-left">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-sm-6 pt-5 pt-md-0" data-swiper-parallax="-500">
+                        <p class="subtitle letter-spacing-3 mb-3 text-dark font-weight-light">Our all-time favourites</p>
+                        <h2 class="display-3" style="line-height: 1">Black &amp; White</h2>
+                        <p class="text-muted mb-5">The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pit</p><a class="btn btn-outline-primary" href="~/#">Discover more</a>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        @*<img class="img-fluid home-slider-image" src="~/img/chair2-transparent.png" alt="" style="max-height: 500px" data-swiper-parallax="-200">*@
+                        <svg class="blobb chair" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                            <path id="blob" d="M 456.5 103.8 c 39.6 42.8 60.2 98.6 63.7 152.4 c 3.6 53.7 -10 105.5 -39.1 141.3 c -29.1 35.8 -73.6 55.6 -117.4 67.1 c -43.9 11.4 -87 14.6 -120.7 -0.8 s -58.1 -49.4 -87.1 -86.8 c -29 -37.5 -62.6 -78.4 -57.4 -113.4 c 5.1 -35 49 -64 89 -106.8 c 40.1 -42.8 76.3 -99.3 123.6 -112.6 C 358.5 31 417 60.9 456.5 103.8 Z" fill="#8ed1fc" style="fill: var(--layer,#8ed1fc);"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide bg-cover-right">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-sm-6 pt-5 pt-md-0" data-swiper-parallax="-500">
+                        <p class="subtitle letter-spacing-3 mb-3 text-dark font-weight-light">Our all-time favourites</p>
+                        <h2 class="display-3" style="line-height: 1">Boxxez</h2>
+                        <p class="text-muted mb-5">The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pit</p><a class="btn btn-outline-primary" href="~/#">Discover more</a>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        @*<img class="img-fluid home-slider-image" src="~/img/box-transparent.png" alt="" style="max-height: 500px" data-swiper-parallax="-200">*@
+                        <svg class="blobb boxx" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" style="color: #f5e6a8" id="blobSvg">
+                            <path id="blob" d="M 456.5 103.8 c 39.6 42.8 60.2 98.6 63.7 152.4 c 3.6 53.7 -10 105.5 -39.1 141.3 c -29.1 35.8 -73.6 55.6 -117.4 67.1 c -43.9 11.4 -87 14.6 -120.7 -0.8 s -58.1 -49.4 -87.1 -86.8 c -29 -37.5 -62.6 -78.4 -57.4 -113.4 c 5.1 -35 49 -64 89 -106.8 c 40.1 -42.8 76.3 -99.3 123.6 -112.6 C 358.5 31 417 60.9 456.5 103.8 Z" fill="#e0d4ab"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-nav d-none d-lg-block">
+        <div class="swiper-button-prev" id="homePrev"></div>
+        <div class="swiper-button-next" id="homeNext"> </div>
+    </div>
+</div>
+
+<section class="py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-8 mb-5">
+                <p class="text-muted font-weight-bold mb-1" style="letter-spacing: 2.29px;">
+                    TOP CHOICES
+                </p>
+                <h3>Popular this week</h3>
+                <p class="text-muted" style="font-size: 20px;">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 card-hover">
+                <a href="#">
+                    <img src="~/img/book-sq.jpg" class="img-fluid">
+                </a>
+                <div class="relative px-4 ">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <h3>
+                            Furniture
+                            <br> source
+                            <br> book
+                        </h3>
+                        <p class="text-muted">
+                            $39.90
+                        </p>
+                    </a>
+                    <p><a href="#" class="text-dark btn btn-link px-0 text-decoration-none"> SHOP NOW</a></p>
+                </div>
+            </div>
+            <div class="col-7 ml-auto card-hover">
+                <div class="position-absolute py-6">
+                    <a class="text-dark text-decoration-none">
+                        <h2>
+                            Norwegg
+                            <br> design
+                            <br> chair
+                        </h2>
+                        <p class="text-muted">
+                            139.90$
+                        </p>
+                    </a>
+                    <p><a href="#" class="text-dark btn btn-link text-decoration-none">SHOP NOW</a></p>
+                </div>
+                <div class="ml-6">
+                    <a href="#"><img src="~/img/chair-2-sq.jpg" class="img-fluid"></a>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row pt-5">
+            <div class="col-4 card-hover ml-auto order-md-2">
+                <a href="#">
+                    <img src="~/img/box-sq.jpg" class="img-fluid">
+                </a>
+                <div class="relative px-4 ">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <h3>
+                            Furniture
+                            <br> source
+                            <br> book
+                        </h3>
+                        <p class="text-muted">
+                            $39.90
+                        </p>
+                    </a>
+                    <p><a href="#" class="text-dark btn btn-link px-0 text-decoration-none"> SHOP NOW</a></p>
+                </div>
+            </div>
+
+            <div class="col-7  card-hover order-1">
+                <div class="position-absolute py-6">
+                    <a class="text-dark text-decoration-none">
+                        <h2>
+                            Norwegg
+                            <br> design
+                            <br> chair
+                        </h2>
+                        <p class="text-muted">
+                            139.90$
+                        </p>
+                    </a>
+                    <p><a href="#" class="text-dark btn btn-link text-decoration-none">SHOP NOW</a></p>
+                </div>
+                <div class="ml-6">
+                    <a href="#"><img src="~/img/clock-sq.jpg" class="img-fluid"></a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row pt-5">
+            <div class="col-3 card-hover  order-md-1">
+                <a href="#">
+                    <img src="~/img/clock2-sq.jpg" class="img-fluid">
+                </a>
+                <div class="relative px-4 ">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <h3>
+                            Furniture
+                            <br> source
+                            <br> book
+                        </h3>
+                        <p class="text-muted">
+                            $39.90
+                        </p>
+                    </a>
+                    <p><a href="#" class="text-dark btn btn-link px-0 text-decoration-none"> SHOP NOW</a></p>
+                </div>
+            </div>
+            <div class="col-8 ml-auto card-hover order-2">
+                <div class="position-absolute py-6">
+                    <a class="text-dark text-decoration-none">
+                        <h2>
+                            Norwegg
+                            <br> design
+                            <br> chair
+                        </h2>
+                        <p class="text-muted">
+                            139.90$
+                        </p>
+                    </a>
+                    <p><a href="#" class="text-dark btn btn-link text-decoration-none">SHOP NOW</a></p>
+                </div>
+                <div class="ml-6">
+                    <a href="#"><img src="~/img/chair3-3-sq.jpg" class="img-fluid"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- //Timer section -->
+<div class="position-relative py-5" style="background-color: #ebf7ff;">
+    <svg class="svg-blob" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" id="blob-shape-4" style="left: -200px;top: 0;">
+        <path d=" M404.2 181.3c38.3 26.6 81.8 52.4 95.4 89.5 13.7 37.1-2.4 85.4-29.2 123.8-26.7 38.3-64 66.8-110 92.7-45.9 26-100.5 49.5-138.2 32.9-37.6-16.5-58.3-73.1-80.1-123.1-21.8-50-44.7-93.4-44.2-139 .5-45.6 24.5-93.4 62.1-120.1 37.6-26.7 88.8-32.4
+            130.9-21.5 42.1 10.8 75.1 38.2 113.3 64.8z " style="fill:var(--layer1, #c4e0f3) " fill="#c4e0f3 "></path>
+    </svg>
+    <div class="container ">
+        <div class="row ">
+            <div class="col-lg-6 d-flex align-items-center ">
+                <div>
+                    <p class="subtitle mb-3 " style="color: #dc3545;text-transform: uppercase; font-weight: bold;">Deal of the week</p>
+                    <h3 class="h1 ">Black and white Nordegg chairs</h3>
+                    <p class="text-muted ">
+                        <del class="mr-3 ">$129.00</del><span>$79.00</span>
+                    </p>
+                    <p class="mb-4 "><span class="badge badge-danger p-3 ">$50 off</span></p>
+                    <div class="bg-white px-5 py-4 shadow mb-4" id="countdown">
+                        <div class="row justify-content-between">
+                            <div class="col-6 col-sm-3 text-center mb-4 mb-sm-0">
+                                <h6 class="h4 mb-2 days">&nbsp;</h6><span class="text-muted">days</span>
+                            </div>
+                            <div class="col-6 col-sm-3 text-center mb-4 mb-sm-0">
+                                <h6 class="h4 mb-2 hours">&nbsp;</h6><span class="text-muted">hours</span>
+                            </div>
+                            <div class="col-6 col-sm-3 text-center">
+                                <h6 class="h4 mb-2 minutes">&nbsp;</h6><span class="text-muted">minutes</span>
+                            </div>
+                            <div class="col-6 col-sm-3 text-center">
+                                <h6 class="h4 mb-2 seconds">&nbsp;</h6><span class="text-muted">seconds</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p><a class="btn btn-outline-dark " href="# ">Shop now</a></p>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center "><img class="img-fluid " src="~/img/chair2-transparent.png" alt=" " style="max-height: 450px; "></div>
+        </div>
+    </div>
+</div>
+
+
+<!-- New Arrivals Section -->
+
+<div class="relative py-6 arrival">
+    <svg class="svg-blob d-none  d-md-block" style="right: -200px; top:400px; color:#f7efcb; overflow-x:hidden" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" id="blob-shape-2">
+        <path d="M430.6 143.2c29.1 25.5 36.4 75.8 32.6 118.6-3.7 42.7-18.5 78-34.8 118.2-16.3 40.2-34 85.3-69.8 111.5-35.7 26.2-89.4 33.4-128.3 13.4-38.9-20-63-67.2-85.8-112.4-22.9-45.2-44.5-88.4-46.7-137.3-2.3-48.9 14.8-103.6 51.7-127.7 36.9-24.2 93.7-17.8 147.5-14.3 53.8 3.6 104.6 4.4 133.6 30z"></path>
+    </svg>
+    <div class="container">
+        <h2>New Arrivals</h2>
+        <p class="paragraph">
+            One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches
+            into stiff sections
+        </p>
+        <div class="row arrival-header">
+            <div class="col-12 col-md">
+                <ul class="list-inline arrival-nav">
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark">All Products</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">Chairs</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">Books</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">Clothes</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">Accessories</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-auto">
+                <a href="#" class="btn btn-link">All Products</a>
+            </div>
+        </div>
+        <div class="row arrival-products">
+            <div class="col-xl-3 col-md-4 col-6">
+                <div class="arrival-product aos-init aos-animate" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="arrival-image">
+                        <div class="product-badge badge badge-secondary">Fresh</div>
+                        <a href="#">
+                            <div class="product-swap-image">
+                                <img src="~/assets/img/chair.jpg" onmouseover="this.src='~/img/chair-2.jpg'" onmouseout="this.src='~/img/chair.jpg'" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="arrival-overlay">
+                            <a href="#" class="text-dark">
+                                <svg class="svg-icon text-hover-primary svg-icon-heavy d-sm-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="retail-bag-1">
+                                    <title>Retail Bag</title>
+                                    <desc>A line styled icon from Orion Icon Library.</desc>
+                                    <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M4 14h56v48H4zm2 0V2h52v12" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M6.2 2.1L16 8 6 14M57.8 2.1L48 8l10 6" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    <path data-name="layer1" d="M42 24a10 10 0 0 1-20 0" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                </svg>
+                                <span class=" d-sm-inline add-cart">Add to cart</span>
+                            </a>
+                            <div>
+                                <a href="#" class="text-dark text-hover-primary">
+                                    <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="heart-1">
+                                        <title>Heart</title>
+                                        <desc>A line styled icon from Orion Icon Library.</desc>
+                                        <path data-name="layer1" d="M47 5c-6.5 0-12.9 4.2-15 10-2.1-5.8-8.5-10-15-10A15 15 0 0 0 2 20c0 13 11 26 30 39 19-13 30-26 30-39A15 15 0 0 0 47 5z" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-dark text-hover-primary" data-toggle="modal" data-target="#quickView">
+                                    <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="expand-1">
+                                        <title>Expand</title>
+                                        <desc>A line styled icon from Orion Icon Library.</desc>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M18 62H2V46" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M62 46v16H46" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M46 2h16v16" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M2 18V2h16m24 40l20 20M2 2l20 19.998" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M22 42.006L2 62M62 2L42 22" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <h3 class="arrival-content text-base">
+                            <a href="#" class="text-dark">Norwegg Chair</a>
+                        </h3>
+                        <span class="text-gray-500 text-sm">$40.00</span>
+                        <div class="arrival-stars text-xs">
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-muted"></i>
+                            <i class="fa fa-star text-muted"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-4 col-6">
+                <div class="arrival-product aos-init aos-animate" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="arrival-image mt-4">
+
+
+                        <a href="#">
+                            <div class="product-swap-image">
+                                <img src="~/assets/img/book.jpg" onmouseover="this.src='~/img/book-2.jpg'" onmouseout="this.src='~/img/book.jpg'" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="arrival-overlay">
+                            <a href="#" class="text-dark">
+                                <svg class="svg-icon text-hover-primary svg-icon-heavy d-sm-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="retail-bag-1">
+                                    <title>Retail Bag</title>
+                                    <desc>A line styled icon from Orion Icon Library.</desc>
+                                    <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M4 14h56v48H4zm2 0V2h52v12" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M6.2 2.1L16 8 6 14M57.8 2.1L48 8l10 6" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    <path data-name="layer1" d="M42 24a10 10 0 0 1-20 0" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                </svg>
+                                <span class=" d-sm-inline add-cart">Add to cart</span>
+                            </a>
+                            <div>
+                                <a href="#" class="text-dark text-hover-primary">
+                                    <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="heart-1">
+                                        <title>Heart</title>
+                                        <desc>A line styled icon from Orion Icon Library.</desc>
+                                        <path data-name="layer1" d="M47 5c-6.5 0-12.9 4.2-15 10-2.1-5.8-8.5-10-15-10A15 15 0 0 0 2 20c0 13 11 26 30 39 19-13 30-26 30-39A15 15 0 0 0 47 5z" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-dark text-hover-primary" data-toggle="modal" data-target="#quickView">
+                                    <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="expand-1">
+                                        <title>Expand</title>
+                                        <desc>A line styled icon from Orion Icon Library.</desc>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M18 62H2V46" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M62 46v16H46" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M46 2h16v16" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M2 18V2h16m24 40l20 20M2 2l20 19.998" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M22 42.006L2 62M62 2L42 22" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <h3 class="arrival-content text-base">
+                            <a href="#" class="text-dark">Norwegg Chair</a>
+                        </h3>
+                        <span class="text-gray-500 text-sm">$40.00</span>
+                        <div class="arrival-stars text-xs">
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-muted"></i>
+                            <i class="fa fa-star text-muted"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-4 col-6">
+                <div class="arrival-product aos-init aos-animate" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="arrival-image">
+                        <div class="product-badge badge badge-primary">Sale</div>
+                        <a href="#">
+                            <div class="product-swap-image">
+                                <img src="~/assets/img/chair2.jpg" onmouseover="this.src='~/img/chair2-2.jpg'" onmouseout="this.src='~/img/chair2.jpg'" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="arrival-overlay">
+                            <a href="#" class="text-dark">
+                                <svg class="svg-icon text-hover-primary svg-icon-heavy d-sm-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="retail-bag-1">
+                                    <title>Retail Bag</title>
+                                    <desc>A line styled icon from Orion Icon Library.</desc>
+                                    <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M4 14h56v48H4zm2 0V2h52v12" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M6.2 2.1L16 8 6 14M57.8 2.1L48 8l10 6" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    <path data-name="layer1" d="M42 24a10 10 0 0 1-20 0" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                </svg>
+                                <span class=" d-sm-inline add-cart">Add to cart</span>
+                            </a>
+                            <div>
+                                <a href="#" class="text-dark text-hover-primary">
+                                    <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="heart-1">
+                                        <title>Heart</title>
+                                        <desc>A line styled icon from Orion Icon Library.</desc>
+                                        <path data-name="layer1" d="M47 5c-6.5 0-12.9 4.2-15 10-2.1-5.8-8.5-10-15-10A15 15 0 0 0 2 20c0 13 11 26 30 39 19-13 30-26 30-39A15 15 0 0 0 47 5z" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-dark text-hover-primary" data-toggle="modal" data-target="#quickView">
+                                    <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="expand-1">
+                                        <title>Expand</title>
+                                        <desc>A line styled icon from Orion Icon Library.</desc>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M18 62H2V46" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M62 46v16H46" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M46 2h16v16" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M2 18V2h16m24 40l20 20M2 2l20 19.998" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M22 42.006L2 62M62 2L42 22" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <h3 class="arrival-content text-base">
+                            <a href="#" class="text-dark">Norwegg Chair</a>
+                        </h3>
+                        <span class="text-gray-500 text-sm">$40.00</span>
+                        <div class="arrival-stars text-xs">
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-muted"></i>
+                            <i class="fa fa-star text-muted"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-4 col-6">
+                <div class="arrival-product aos-init aos-animate" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="arrival-image mt-4">
+                        <div class="product-badge badge badge-primary"></div>
+                        <a href="#">
+                            <div class="product-swap-image">
+                                <img src="~/assets/img/chair3.jpg" onmouseover="this.src='~/img/chair3-3.jpg'" onmouseout="this.src='~/img/chair3.jpg'" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="arrival-overlay">
+                            <a href="#" class="text-dark">
+                                <svg class="svg-icon text-hover-primary svg-icon-heavy d-sm-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="retail-bag-1">
+                                    <title>Retail Bag</title>
+                                    <desc>A line styled icon from Orion Icon Library.</desc>
+                                    <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M4 14h56v48H4zm2 0V2h52v12" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M6.2 2.1L16 8 6 14M57.8 2.1L48 8l10 6" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    <path data-name="layer1" d="M42 24a10 10 0 0 1-20 0" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                </svg>
+                                <span class=" d-sm-inline add-cart">Add to cart</span>
+                            </a>
+                            <div>
+                                <a href="#" class="text-dark text-hover-primary">
+                                    <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="heart-1">
+                                        <title>Heart</title>
+                                        <desc>A line styled icon from Orion Icon Library.</desc>
+                                        <path data-name="layer1" d="M47 5c-6.5 0-12.9 4.2-15 10-2.1-5.8-8.5-10-15-10A15 15 0 0 0 2 20c0 13 11 26 30 39 19-13 30-26 30-39A15 15 0 0 0 47 5z" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-dark text-hover-primary" data-toggle="modal" data-target="#quickView">
+                                    <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="expand-1">
+                                        <title>Expand</title>
+                                        <desc>A line styled icon from Orion Icon Library.</desc>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M18 62H2V46" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M62 46v16H46" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M46 2h16v16" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M2 18V2h16m24 40l20 20M2 2l20 19.998" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M22 42.006L2 62M62 2L42 22" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <h3 class="arrival-content text-base">
+                            <a href="#" class="text-dark">Norwegg Chair</a>
+                        </h3>
+                        <span class="text-gray-500 text-sm">$40.00</span>
+                        <div class="arrival-stars text-xs">
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-muted"></i>
+                            <i class="fa fa-star text-muted"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-4 col-6">
+                <div class="arrival-product aos-init aos-animate" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="arrival-image mt-4">
+                        <div class="product-badge badge badge-primary"></div>
+                        <a href="#">
+                            <div class="product-swap-image">
+                                <img src="~/assets/img/clock.jpg" onmouseover="this.src='~/img/clock-2.jpg'" onmouseout="this.src='~/img/clock.jpg'" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="arrival-overlay">
+                            <a href="#" class="text-dark">
+                                <svg class="svg-icon text-hover-primary svg-icon-heavy d-sm-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="retail-bag-1">
+                                    <title>Retail Bag</title>
+                                    <desc>A line styled icon from Orion Icon Library.</desc>
+                                    <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M4 14h56v48H4zm2 0V2h52v12" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M6.2 2.1L16 8 6 14M57.8 2.1L48 8l10 6" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    <path data-name="layer1" d="M42 24a10 10 0 0 1-20 0" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                </svg>
+                                <span class=" d-sm-inline add-cart">Add to cart</span>
+                            </a>
+                            <div>
+                                <a href="#" class="text-dark text-hover-primary">
+                                    <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="heart-1">
+                                        <title>Heart</title>
+                                        <desc>A line styled icon from Orion Icon Library.</desc>
+                                        <path data-name="layer1" d="M47 5c-6.5 0-12.9 4.2-15 10-2.1-5.8-8.5-10-15-10A15 15 0 0 0 2 20c0 13 11 26 30 39 19-13 30-26 30-39A15 15 0 0 0 47 5z" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-dark text-hover-primary" data-toggle="modal" data-target="#quickView">
+                                    <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="expand-1">
+                                        <title>Expand</title>
+                                        <desc>A line styled icon from Orion Icon Library.</desc>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M18 62H2V46" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M62 46v16H46" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M46 2h16v16" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M2 18V2h16m24 40l20 20M2 2l20 19.998" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M22 42.006L2 62M62 2L42 22" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <h3 class="arrival-content text-base">
+                            <a href="#" class="text-dark">Norwegg Chair</a>
+                        </h3>
+                        <span class="text-gray-500 text-sm">$40.00</span>
+                        <div class="arrival-stars text-xs">
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-muted"></i>
+                            <i class="fa fa-star text-muted"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-4 col-6">
+                <div class="arrival-product aos-init aos-animate" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="arrival-image mt-4">
+                        <div class="product-badge badge badge-primary"></div>
+                        <a href="#">
+                            <div class="product-swap-image">
+                                <img src="~/assets/img/clock3.jpg" onmouseover="this.src='~/img/clock3-2.jpg'" onmouseout="this.src='~/img/clock3.jpg'" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="arrival-overlay">
+                            <a href="#" class="text-dark">
+                                <svg class="svg-icon text-hover-primary svg-icon-heavy d-sm-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="retail-bag-1">
+                                    <title>Retail Bag</title>
+                                    <desc>A line styled icon from Orion Icon Library.</desc>
+                                    <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M4 14h56v48H4zm2 0V2h52v12" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M6.2 2.1L16 8 6 14M57.8 2.1L48 8l10 6" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    <path data-name="layer1" d="M42 24a10 10 0 0 1-20 0" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                </svg>
+                                <span class=" d-sm-inline add-cart">Add to cart</span>
+                            </a>
+                            <div>
+                                <a href="#" class="text-dark text-hover-primary">
+                                    <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="heart-1">
+                                        <title>Heart</title>
+                                        <desc>A line styled icon from Orion Icon Library.</desc>
+                                        <path data-name="layer1" d="M47 5c-6.5 0-12.9 4.2-15 10-2.1-5.8-8.5-10-15-10A15 15 0 0 0 2 20c0 13 11 26 30 39 19-13 30-26 30-39A15 15 0 0 0 47 5z" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-dark text-hover-primary" data-toggle="modal" data-target="#quickView">
+                                    <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="expand-1">
+                                        <title>Expand</title>
+                                        <desc>A line styled icon from Orion Icon Library.</desc>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M18 62H2V46" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M62 46v16H46" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M46 2h16v16" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M2 18V2h16m24 40l20 20M2 2l20 19.998" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M22 42.006L2 62M62 2L42 22" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <h3 class="arrival-content text-base">
+                            <a href="#" class="text-dark">Norwegg Chair</a>
+                        </h3>
+                        <span class="text-gray-500 text-sm">$40.00</span>
+                        <div class="arrival-stars text-xs">
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-muted"></i>
+                            <i class="fa fa-star text-muted"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-4 col-6">
+                <div class="arrival-product aos-init aos-animate" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="arrival-image ">
+                        <div class="product-badge badge badge-dark">Sol out</div>
+                        <a href="#">
+                            <div class="product-swap-image">
+                                <img src="~/assets/img/box.jpg" onmouseover="this.src='~/img/box-2.jpg'" onmouseout="this.src='~/img/box.jpg'" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="arrival-overlay">
+                            <a href="#" class="text-dark">
+                                <svg class="svg-icon text-hover-primary svg-icon-heavy d-sm-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="retail-bag-1">
+                                    <title>Retail Bag</title>
+                                    <desc>A line styled icon from Orion Icon Library.</desc>
+                                    <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M4 14h56v48H4zm2 0V2h52v12" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M6.2 2.1L16 8 6 14M57.8 2.1L48 8l10 6" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    <path data-name="layer1" d="M42 24a10 10 0 0 1-20 0" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                </svg>
+                                <span class=" d-sm-inline add-cart">Add to cart</span>
+                            </a>
+                            <div>
+                                <a href="#" class="text-dark text-hover-primary">
+                                    <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="heart-1">
+                                        <title>Heart</title>
+                                        <desc>A line styled icon from Orion Icon Library.</desc>
+                                        <path data-name="layer1" d="M47 5c-6.5 0-12.9 4.2-15 10-2.1-5.8-8.5-10-15-10A15 15 0 0 0 2 20c0 13 11 26 30 39 19-13 30-26 30-39A15 15 0 0 0 47 5z" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-dark text-hover-primary" data-toggle="modal" data-target="#quickView">
+                                    <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="expand-1">
+                                        <title>Expand</title>
+                                        <desc>A line styled icon from Orion Icon Library.</desc>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M18 62H2V46" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M62 46v16H46" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M46 2h16v16" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M2 18V2h16m24 40l20 20M2 2l20 19.998" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M22 42.006L2 62M62 2L42 22" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <h3 class="arrival-content text-base">
+                            <a href="#" class="text-dark">Norwegg Chair</a>
+                        </h3>
+                        <span class="text-gray-500 text-sm">$40.00</span>
+                        <div class="arrival-stars text-xs">
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-muted"></i>
+                            <i class="fa fa-star text-muted"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-4 col-6">
+                <div class="arrival-product aos-init aos-animate" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="arrival-image mt-4">
+                        <div class="product-badge badge badge-primary"></div>
+                        <a href="#">
+                            <div class="product-swap-image">
+                                <img src="~/img/box2.jpg" onmouseover="this.src='~/img/box-2.jpg'" onmouseout="this.src='~/img/box2.jpg'" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="arrival-overlay">
+                            <a href="#" class="text-dark">
+                                <svg class="svg-icon text-hover-primary svg-icon-heavy d-sm-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="retail-bag-1">
+                                    <title>Retail Bag</title>
+                                    <desc>A line styled icon from Orion Icon Library.</desc>
+                                    <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M4 14h56v48H4zm2 0V2h52v12" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M6.2 2.1L16 8 6 14M57.8 2.1L48 8l10 6" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    <path data-name="layer1" d="M42 24a10 10 0 0 1-20 0" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                </svg>
+                                <span class=" d-sm-inline add-cart">Add to cart</span>
+                            </a>
+                            <div>
+                                <a href="#" class="text-dark text-hover-primary">
+                                    <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="heart-1">
+                                        <title>Heart</title>
+                                        <desc>A line styled icon from Orion Icon Library.</desc>
+                                        <path data-name="layer1" d="M47 5c-6.5 0-12.9 4.2-15 10-2.1-5.8-8.5-10-15-10A15 15 0 0 0 2 20c0 13 11 26 30 39 19-13 30-26 30-39A15 15 0 0 0 47 5z" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer1, #202020)"></path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-dark text-hover-primary" data-toggle="modal" data-target="#quickView">
+                                    <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="expand-1">
+                                        <title>Expand</title>
+                                        <desc>A line styled icon from Orion Icon Library.</desc>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M18 62H2V46" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M62 46v16H46" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M46 2h16v16" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M2 18V2h16m24 40l20 20M2 2l20 19.998" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                        <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M22 42.006L2 62M62 2L42 22" stroke-linejoin="round" stroke-linecap="round" style="stroke:var(--layer2, #202020)"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <h3 class="arrival-content text-base">
+                            <a href="#" class="text-dark">Norwegg Chair</a>
+                        </h3>
+                        <span class="text-gray-500 text-sm">$40.00</span>
+                        <div class="arrival-stars text-xs">
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-muted"></i>
+                            <i class="fa fa-star text-muted"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="container mt-5 py-6 h-100 ">
+    <div class="relative text-center " style="background: #eae0bd; ">
+        <div class="position-absolute w-100 h-100 overflow-hidden ">
+            <svg viewBox="0 0 600 600 " xmlns="http://www.w3.org/2000/svg " id="blob-shape " style=" position:absolute; width: 400px; height: 400px; max-width: 100%; left: -200px; top: -50px; ">
+                <path d="M419.4 180.5c43 43.1 90.8 81.3 90.2 118.9C509 337 460 374 417 416c-43 42-80 89-124.9 96.9-44.9 7.9-97.7-23.3-141.2-65.3-43.5-42-77.7-94.8-83.8-153.7-6.2-59 15.8-124 59.3-167.2 43.5-43.1 108.5-64.4 160.2-51 51.6 13.4 89.8
+            61.6 132.8 104.8z " style="fill:var(--layer1, #BCAC76) " "></path>
+            </svg>
+        </div>
+        <div class="py-6 px-4">
+            <img class="position-absolute d-md-block" style="right: 0;top: -50px; max-height: 100%; z-index: 5;" src="~/img/chair-transparent.png" alt="">
+            <div class="relative z-index-10 summer-sales-content">
+                <h4>Summer Sales</h4>
+                <h5>Our biggest sales this year &mdash; up to 60% off!</h5><a class="btn btn-outline-dark" href="#">Start shopping</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,408 @@
+@mixin heading-margin {
+    margin-top: 0;
+    margin-bottom: .5rem
+}
+
+@mixin p-margin {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+@mixin a-hover {
+    color: $hover-color;
+    text-decoration: underline;
+}
+
+@mixin hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+@mixin address {
+    margin-bottom: 1rem;
+    font-style: normal;
+    line-height: inherit;
+}
+
+@mixin sub-sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+@mixin sub-bottom {
+    bottom: -.25em;
+}
+
+@mixin sup-top {
+    top: -.5em;
+}
+
+@mixin strong-weight {
+    font-weight: 700;
+}
+
+@mixin small-size {
+    font-size: 80%;
+}
+
+@mixin a {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+@mixin hidden {
+    display: none !important;
+}
+
+@mixin h1-h2-h3-h4-h5-h6 {
+    margin-bottom: .5rem;
+    font-weight: 700;
+    line-height: 1.3
+}
+
+@mixin h1-size {
+    font-size: 2.5rem;
+}
+
+@mixin h2-size {
+    font-size: 2rem;
+}
+
+@mixin h3-size {
+    font-size: 1.75rem;
+}
+
+@mixin h4-size {
+    font-size: 1.5rem;
+}
+
+@mixin h5-size {
+    font-size: 1.25rem;
+}
+
+@mixin abbr {
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+    cursor: help;
+    border-bottom: 0;
+}
+
+@mixin h6-size {
+    font-size: 1rem;
+}
+
+@mixin lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+@mixin hr-margin-border {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@mixin list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+
+@mixin list-inline-item {
+    display: inline-block;
+}
+
+@mixin last-inline-item-lastChild {
+    margin-right: .5rem;
+}
+
+@mixin img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+@mixin container-options {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@mixin col-options {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@mixin col {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+@mixin row-col-1 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@mixin row-col-2 {
+    flex: 0 0 50%;
+    max-width: 50%
+}
+
+@mixin row-col-3 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%
+}
+
+@mixin row-col-4 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+@mixin row-col-5 {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+@mixin row-col-6 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+}
+
+@mixin col-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+}
+
+@mixin col-1 {
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+}
+
+@mixin col-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%
+}
+
+@mixin col-3 {
+    flex: 0 0 25%;
+    max-width: 25%
+}
+
+@mixin col-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%
+}
+
+@mixin col-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%
+}
+
+@mixin col-6 {
+    flex: 0 0 50%;
+    max-width: 50%
+}
+
+@mixin col-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%
+}
+
+@mixin col-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%
+}
+
+@mixin col-9 {
+    flex: 0 0 75%;
+    max-width: 75%
+}
+
+@mixin col-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%
+}
+
+@mixin col-11 {
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%
+}
+
+@mixin col-12 {
+    flex: 0 0 100%;
+    max-width: 100%
+}
+
+@mixin btn {
+    display: inline-block;
+    font-weight: 400;
+    color: $dark-text;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .525rem .75rem;
+    font-size: .8rem;
+    line-height: 1.6;
+    border-radius: 0;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@mixin btn-hover {
+    color: $dark-text;
+    text-decoration: none
+}
+
+@mixin btn-primary {
+    color: $dark-text;
+    background-color: $primary-color;
+    border-color: $primary-color;
+}
+
+@mixin btn-primary-hover {
+    color: #212529;
+    background-color: $btn-background-color;
+    border-color: $btn-border-color;
+}
+
+@mixin btn-secondary {
+    color: $white-color;
+    background-color: $btn-secondary-background-color;
+    border-color: $btn-secondary-border-color;
+}
+
+@mixin btn-secondary-hover {
+    color: $white-color;
+    background-color: $btn-secondary-hover-bg-color;
+    border-color: $btn-secondary-hover-border-color;
+}
+
+@mixin btn-success {
+    color: $white-color;
+    background-color: $btn-success-bg-color;
+    border-color: $btn-success-border-color;
+}
+
+@mixin btn-success-hover {
+    color: $white-color;
+    background-color: $btn-success-hover-bg-color;
+    border-color: $btn-success-hover-border-color;
+}
+
+@mixin btn-info {
+    color: $white-color;
+    background-color: $btn-info-bg-color;
+    border-color: $btn-info-border-color;
+}
+
+@mixin btn-info-hover {
+    color: $white-color;
+    background-color: $btn-info-hover-bg-color;
+    border-color: $btn-info-hover-border-color;
+}
+
+@mixin btn-light {
+    color: $dark-text;
+    background-color: $btn-light-bg-color;
+    border-color: $btn-light-border-color;
+}
+
+@mixin btn-light-hover {
+    color: $dark-text;
+    background-color: $btn-light-hover-bg-color;
+    border-color: $btn-light-hover-border-color;
+}
+
+@mixin btn-dark {
+    color: $white-color;
+    background-color: $dark-text;
+    border-color: $dark-text;
+}
+
+@mixin btn-dark-hover {
+    color: $white-color;
+    background-color: $btn-dark-hover-bg-color;
+    border-color: $btn-dark-hover-border-color;
+}
+
+@mixin btn-outline-primary {
+    color: $primary-color;
+    border-color: $primary-color;
+}
+
+@mixin btn-outline-success {
+    color: $btn-success-bg-color;
+    border-color: $btn-success-bg-color;
+}
+
+@mixin btn-outline-secondary {
+    color: $btn-secondary-background-color;
+    border-color: $btn-secondary-background-color;
+}
+
+@mixin btn-outline-warning {
+    color: $btn-outline-warning-color;
+    border-color: $btn-outline-warning-color;
+}
+
+@mixin btn-outline-primary-hover {
+    color: $dark-text;
+    background-color: $primary-color;
+    border-color: $primary-color;
+}
+
+@mixin btn-outline-warning-hover {
+    color: $dark-text;
+    background-color: $btn-outline-warning-color;
+    border-color: $btn-outline-warning-color;
+}
+
+@mixin btn-outline-success-hover {
+    color: $white-color;
+    background-color: $btn-success-bg-color;
+    border-color: $btn-success-bg-color;
+}
+
+@mixin btn-outline-secondary-hover {
+    color: $white-color;
+    background-color: $btn-secondary-background-color;
+    border-color: $btn-secondary-background-color;
+}
+
+@mixin btn-link {
+    font-weight: 400;
+    color: $primary-color;
+    text-decoration: none;
+}
+
+@mixin btn-link-hover {
+    color: $hover-color;
+    text-decoration: underline;
+}
+
+@mixin badge-danger {
+    color: $white-color;
+    background-color: $badge-danger-bg-color;
+}
+
+@mixin badge-danger-hover {
+    color: $white-color;
+    background-color: $badge-danger-hover-bg-color;
+}
+
+@mixin badge-muted {
+    color: $white-color;
+    background-color: $dropdown-item-color;
+}
